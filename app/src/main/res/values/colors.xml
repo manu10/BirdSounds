@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#234f04</color>
+    <color name="colorPrimaryDark">#296700</color>
+    <color name="colorAccent">#598a27</color>
+
+    <!--Color poicker: http://www.w3schools.com/colors/colors_picker.asp-->
+</resources>
