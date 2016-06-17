@@ -11,7 +11,7 @@
     android:showDividers="middle"
     tools:context="com.example.manuel.birdsounds.BirdListActivity">
 
-    <!--
+    <!-- TODO: delete this because I'll just  use layout-land
     This layout is a two-pane layout for the Birds
     master/detail flow.
     

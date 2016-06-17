@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bird_detail"
     style="?android:attr/textAppearanceLarge"
     android:layout_width="match_parent"
@@ -42,10 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/informacion_sobre_las_aves_de_la_patagonia_informacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagonia_informacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagonia_informacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagoniainformacion_sobre_las_aves_de_la_patagonia"
+            android:text="@string/bird_detail"
             android:id="@+id/textView"
-
-            />
+             />
     </ScrollView>
 
 </RelativeLayout>

@@ -16,6 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /**
  * An activity representing a single Bird detail screen. This
  * activity is only used narrow width devices. On tablet-size devices,
@@ -23,11 +26,11 @@ import android.widget.CheckBox;
  * in a {@link BirdListActivity}.
  */
 public class BirdDetailActivity extends AppCompatActivity {
-    private static MediaPlayer mediaPlayer;
-    private boolean reproduciendo=false;
-    private static boolean isLoop=false;
-    private boolean isPaused=false;
-    private boolean activityPaused=false;
+//    private static MediaPlayer mediaPlayer;
+//    private boolean reproduciendo=false;
+//    private static boolean isLoop=false;
+//    private boolean isPaused=false;
+//    private boolean activityPaused=false;
 
 
     @Override
@@ -35,50 +38,55 @@ public class BirdDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bird_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
-
+        AdView adView = (AdView) findViewById(R.id.adViewList);
+        AdRequest adRequest = new AdRequest.Builder()/*.addTestDevice("D4F0E6D693AC1AF89F9FFBF5F155C836")*/.build();
+        if (adView != null) {
+            adView.loadAd(adRequest);
+        }
 
         int id=Integer.valueOf(getIntent().getStringExtra(BirdDetailFragment.ARG_ITEM_ID));
-        mediaPlayer = MediaPlayer.create(getBaseContext(), Ave.avesSounds[id]);//mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.condor_short);
+//TODO: delete this!
+//        mediaPlayer = MediaPlayer.create(getBaseContext(), Ave.avesSounds[id]);//mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.condor_short);
         setAppBarBckground(id);
         setSupportActionBar(toolbar);
-
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                if (reproduciendo){
-                    if (mediaPlayer.isPlaying()){
-                        reproduciendo=false;
-                        mediaPlayer.pause();
-                        isPaused=true;
-                        fab.setImageResource(android.R.drawable.ic_media_play);
-                    }
-                }else {
-                    fab.setImageResource(android.R.drawable.ic_media_pause);
-
-                    reproduciendo = true;
-                    Snackbar.make(view, "Comenzo a reproducir el sonido", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                    if (!isPaused){
-
-                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                            @Override
-                            public void onCompletion(MediaPlayer mp) {
-                                if (!isLoop){
-                                    fab.setImageResource(android.R.drawable.ic_media_play);
-                                    reproduciendo=false;
-                                }
-                            }
-                        });
-                    }
-                    mediaPlayer.setLooping(isLoop);
-
-                    mediaPlayer.start();
-                }
-            }
-        });
+//TODO: delete this!
+//        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                if (reproduciendo){
+//                    if (mediaPlayer.isPlaying()){
+//                        reproduciendo=false;
+//                        mediaPlayer.pause();
+//                        isPaused=true;
+//                        fab.setImageResource(android.R.drawable.ic_media_play);
+//                    }
+//                }else {
+//                    fab.setImageResource(android.R.drawable.ic_media_pause);
+//
+//                    reproduciendo = true;
+//                    Snackbar.make(view, "Comenzo a reproducir el sonido", Snackbar.LENGTH_LONG)
+//                            .setAction("Action", null).show();
+//                    if (!isPaused){
+//
+//                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//                            @Override
+//                            public void onCompletion(MediaPlayer mp) {
+//                                if (!isLoop){
+//                                    fab.setImageResource(android.R.drawable.ic_media_play);
+//                                    reproduciendo=false;
+//                                }
+//                            }
+//                        });
+//                    }
+//                    mediaPlayer.setLooping(isLoop);
+//
+//                    mediaPlayer.start();
+//                }
+//            }
+//        });
 
 
         // Show the Up button in the action bar.
@@ -121,17 +129,17 @@ public class BirdDetailActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if ((mediaPlayer!=null)&&(mediaPlayer.isPlaying())) {
-            activityPaused = true;
-            mediaPlayer.pause();
-        }
+//        if ((mediaPlayer!=null)&&(mediaPlayer.isPlaying())) {
+//            activityPaused = true;
+//            mediaPlayer.pause();
+//        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if(activityPaused)
-            mediaPlayer.start();
+//        if(activityPaused)
+//            mediaPlayer.start();
     }
 
     @Override
@@ -151,10 +159,10 @@ public class BirdDetailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static void chkBxPressed() {
-        isLoop=!isLoop;
-        if (mediaPlayer!=null){
-            mediaPlayer.setLooping(isLoop);
-        }
-    }
+//    public static void chkBxPressed() {
+//        isLoop=!isLoop;
+//        if (mediaPlayer!=null){
+//            mediaPlayer.setLooping(isLoop);
+//        }
+//    }
 }

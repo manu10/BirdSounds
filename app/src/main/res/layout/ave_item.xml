@@ -6,7 +6,7 @@
         android:layout_height="200dp"
         android:scaleType="centerCrop"
         android:id="@+id/ave_image"
-        android:contentDescription="@string/ave"/>
+        android:contentDescription="bird"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
