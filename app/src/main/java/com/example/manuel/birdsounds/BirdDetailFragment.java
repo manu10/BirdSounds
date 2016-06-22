@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 
-import com.example.manuel.birdsounds.dummy.DummyContent;
+
 import com.example.manuel.multidex.mulbirdsounds.R;
 
 /**
@@ -39,7 +39,7 @@ public class BirdDetailFragment extends Fragment {
     /**
      * The dummy content this fragment is presenting.
      */
-    private DummyContent.DummyItem mItem;
+
 
     private static MediaPlayer mediaPlayer;
     private boolean reproduciendo=false;
