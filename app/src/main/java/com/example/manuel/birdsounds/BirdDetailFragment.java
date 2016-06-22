@@ -18,6 +18,7 @@ import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 
 import com.example.manuel.birdsounds.dummy.DummyContent;
+import com.example.manuel.multidex.mulbirdsounds.R;
 
 /**
  * A fragment representing a single Bird detail screen.
